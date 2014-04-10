@@ -5,5 +5,10 @@
   :dev-dependencies [[lein-koan "0.1.2"]]
   :profiles {:dev {:dependencies [[lein-koan "0.1.2"]]}}
   :repl-options {:init-ns user}
+  :mirrors {"snapshots" {:name "qds-snap"
+                         :url "http://qdsnexus.qg.com/nexus/content/groups/public-snapshots"}
+            #".*" {:name "qds-nexus"
+                  :url "http://qdsnexus.qg.com/nexus/content/groups/public"}
+}
   :plugins [[lein-koan "0.1.2"]]
   :main koan-engine.runner/exec)
