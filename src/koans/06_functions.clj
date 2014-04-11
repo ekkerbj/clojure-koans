@@ -23,11 +23,11 @@
   (= 30 (#(* 15 %2) 1 2))
 
   "One function can beget another"
-  (= 9 (((fn [] ___)) 4 5))
+  (= 9 ((fn [a b] (+ a b)) 4 5))
 
   "Functions can also take other functions as input"
   (= 20 ((fn [f] (f 4 5))
-           ___))
+          ___))
 
   "Higher-order functions take function arguments"
   (= 25 (___
