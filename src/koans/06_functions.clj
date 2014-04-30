@@ -27,11 +27,11 @@
 
   "Functions can also take other functions as input"
   (= 20 ((fn [f] (f 4 5))
-          ___))
+         (fn [a b] (* a b)) ))
 
   "Higher-order functions take function arguments"
-  (= 25 (___
+  (= 25 ( (fn [f] (f 5))
           (fn [n] (* n n))))
 
   "But they are often better written using the names of functions"
-  (= 25 (___ square)))
+  (= 25 ((fn [f] (f 5)) square)))
